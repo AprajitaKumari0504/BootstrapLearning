@@ -3,9 +3,10 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { Login } from './login/login';
 import { TodoApp } from './todo-app/todo-app';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink,CommonModule,Login, TodoApp],
+  imports: [RouterOutlet, RouterLink,FormsModule,CommonModule,Login, TodoApp],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

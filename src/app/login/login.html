@@ -1,1 +1,37 @@
-<p>login works!</p>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card p-4">
+        <h3 class="text-center mb-3">Login</h3>
+
+        <form (ngSubmit)="login()">
+          <div class="mb-3">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              [value]="email"
+              (input)="email = $any($event.target).value"
+              name="email"
+              required>
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              [value]="password"
+              (input)="password = $any($event.target).value"
+              name="password"
+              required>
+          </div>
+
+          <button class="btn btn-primary w-100" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
